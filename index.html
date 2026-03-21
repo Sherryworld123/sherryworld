@@ -3,36 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>莫妮的雪利世界</title>
-    <meta name="description" content="中国最专业的雪利酒知识平台">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #faf8f5; color: #3d3028; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
-        header { text-align: center; margin-bottom: 2rem; }
-        header h1 { color: #6b1d2a; font-size: 2.5rem; }
-        header p { color: #8b6914; }
-        .card { background: #fff; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 3px solid #6b1d2a; }
-        .card h2 { font-size: 1.2rem; }
-        .card h2 a { color: #6b1d2a; text-decoration: none; }
-        .card h2 a:hover { color: #8b6914; }
-        .card time { color: #999; font-size: 0.85rem; }
-        footer { text-align: center; margin-top: 3rem; color: #999; font-size: 0.85rem; }
-    </style>
+    <title>莫妮的雪利世界 | 中国最专业的雪利酒知识平台</title>
+    <meta name="description" content="莫妮的雪利世界 - 传播专业的雪利酒知识，提供丰富的雪利酒产品，分享雪利酒带来的乐趣。了解Fino、Amontillado、Oloroso、Pedro Ximenez等各类雪利酒。">
+    <meta name="keywords" content="雪利酒,雪莉酒,sherry,雪利酒推荐,雪利酒入门,莫妮的雪利世界,Fino,Amontillado,Oloroso,Pedro Ximenez,西班牙雪利酒,加强酒">
+    <meta name="author" content="莫妮的雪利世界">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="莫妮的雪利世界 | 中国最专业的雪利酒知识平台">
+    <meta property="og:description" content="传播专业的雪利酒知识，提供丰富的雪利酒产品，分享雪利酒带来的乐趣。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sherryworld.cn">
+    <meta property="og:locale" content="zh_CN">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "莫妮的雪利世界",
+        "url": "https://sherryworld.cn",
+        "description": "中国最专业的雪利酒知识平台",
+        "publisher": {
+            "@type": "Organization",
+            "name": "莫妮的雪利世界",
+            "sameAs": [
+                "https://sherryworld.taobao.com"
+            ]
+        }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://sherryworld.cn">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>莫妮的雪利世界</h1>
-            <p>中国最专业的雪利酒知识平台</p>
-        </header>
-        <main>
-        <article class="card">
-            <h2><a href="articles/7653559e55.html">无标题</a></h2>
-            <time>2026-03-21</time>
-        </article>
-    </main>
-        <footer>&copy; 莫妮的雪利世界</footer>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍷</span>
+                <span class="logo-text">莫妮的雪利世界</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="guide.html">雪利酒百科</a></li>
+                <li><a href="articles.html">文章</a></li>
+                <li><a href="products.html">推荐酒款</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle">Since 2015 · 专注雪利酒</p>
+            <h1>装在瓶子里的西班牙阳光</h1>
+            <p class="hero-desc">探索雪利酒的世界——从清冽的 Fino 到甜蜜的 Pedro Ximénez，<br>每一种都是时光与风土的馈赠。</p>
+            <div class="hero-actions">
+                <a href="guide.html" class="btn btn-primary">雪利酒入门指南</a>
+                <a href="articles.html" class="btn btn-outline">浏览文章</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sherry Types Section -->
+    <section class="section sherry-types">
+        <div class="container">
+            <div class="section-header">
+                <h2>探索雪利酒的类型</h2>
+                <p>每一种雪利酒都有独特的个性，总有一款适合你</p>
+            </div>
+            <div class="types-grid">
+                <a href="guide.html#fino" class="type-card">
+                    <div class="type-icon">🥂</div>
+                    <h3>Fino</h3>
+                    <p class="type-style">干型 · 清冽</p>
+                    <p>淡金色，带有杏仁和新鲜面包的香气。口感干爽、轻盈，是雪利酒中最优雅的类型。</p>
+                </a>
+                <a href="guide.html#manzanilla" class="type-card">
+                    <div class="type-icon">🌊</div>
+                    <h3>Manzanilla</h3>
+                    <p class="type-style">干型 · 海风</p>
+                    <p>产自桑卢卡尔，受大西洋海风影响，带有独特的咸鲜风味和花香。</p>
+                </a>
+                <a href="guide.html#amontillado" class="type-card">
+                    <div class="type-icon">🌰</div>
+                    <h3>Amontillado</h3>
+                    <p class="type-style">干型 · 坚果</p>
+                    <p>先在酒花下陈年，再氧化熟化。琥珀色，带有烤坚果、皮革和香料的复杂香气。</p>
+                </a>
+                <a href="guide.html#oloroso" class="type-card">
+                    <div class="type-icon">🕯️</div>
+                    <h3>Oloroso</h3>
+                    <p class="type-style">干型 · 浓郁</p>
+                    <p>深金色至棕色，未经酒花覆盖直接氧化。浓郁复杂，带有核桃、焦糖和干果的香气。</p>
+                </a>
+                <a href="guide.html#palo-cortado" class="type-card">
+                    <div class="type-icon">✨</div>
+                    <h3>Palo Cortado</h3>
+                    <p class="type-style">干型 · 珍稀</p>
+                    <p>最稀有也最令人惊喜的类型，兼具 Amontillado 的细腻和 Oloroso 的浓郁。</p>
+                </a>
+                <a href="guide.html#px" class="type-card">
+                    <div class="type-icon">🍯</div>
+                    <h3>Pedro Ximénez</h3>
+                    <p class="type-style">甜型 · 甜蜜</p>
+                    <p>用日晒葡萄干酿制，糖浆般的质地，带有葡萄干、无花果、巧克力和咖啡的浓郁香气。</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="section articles-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>最新文章</h2>
+                <p>专业的雪利酒知识与行业动态</p>
+            </div>
+            <div class="articles-grid">
+                <a href="articles/fino-summer-drink-2fcde904.html" class="article-card">
+                    <div class="article-date">2025年</div>
+                    <h3>一年陈的Fino，竟是沁人心脾的解暑神器</h3>
+                    <p>这支令人惊喜的Fino上架才短短几周，已收获一波好评。除了颜值惹人爱不释手，饮家们更为不知不觉喝完一瓶的超快速度和轻松愉悦惊叹不已……</p>
+                    <span class="read-more">阅读全文 →</span>
+                </a>
+                <a href="articles/2025-sherry-sales.html" class="article-card">
+                    <div class="article-date">2026年2月</div>
+                    <h3>2025年雪利酒销量概况</h3>
+                    <p>Manzanilla蝉联销量冠军，英国市场逆势增长7.4%，印度市场即将打开新局面……</p>
+                    <span class="read-more">阅读全文 →</span>
+                </a>
+                <a href="articles/2025-popular-wines.html" class="article-card">
+                    <div class="article-date">2026年</div>
+                    <h3>2025最受欢迎葡萄酒排行</h3>
+                    <p>全球最受欢迎的葡萄酒有哪些？雪利酒在其中的表现如何？</p>
+                    <span class="read-more">阅读全文 →</span>
+                </a>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="articles.html" class="btn btn-outline">查看全部文章</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / CTA Section -->
+    <section class="section about-preview">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>关于「莫妮的雪利世界」</h2>
+                    <p>我们自2015年起深耕雪利酒领域，致力于将西班牙赫雷斯最纯正的雪利酒文化带给中国消费者。</p>
+                    <p>从专业品鉴到日常佐餐，从酒庄探访到知识分享，我们希望每一位爱酒之人都能找到属于自己的那杯雪利酒。</p>
+                    <ul class="about-list">
+                        <li>📚 传播专业的雪利酒知识</li>
+                        <li>🍷 提供丰富的雪利酒产品</li>
+                        <li>🎉 分享雪利酒带来的乐趣</li>
+                    </ul>
+                </div>
+                <div class="about-contact">
+                    <div class="contact-card">
+                        <h3>联系我们</h3>
+                        <p>📱 微信客服：jiang-jiang-ge</p>
+                        <p>🛒 淘宝店铺：<a href="https://sherryworld.taobao.com" target="_blank" rel="noopener">sherryworld.taobao.com</a></p>
+                        <p>📢 微信公众号：莫妮的雪利世界</p>
+                        <div class="qr-placeholder">
+                            <p>（公众号二维码）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section for GEO -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>什么是雪利酒？</h3>
+                    <p>雪利酒（Sherry）是一种来自西班牙南部安达卢西亚地区的加强型葡萄酒。只有在赫雷斯、圣玛利亚港和桑卢卡尔这三个城市（被称为"雪利金三角"）生产的加强酒，才有资格被命名为"雪利酒"。雪利酒采用独特的索莱拉（Solera）系统陈酿，被誉为"装在瓶子里的西班牙阳光"。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>雪利酒和雪莉酒有什么区别？</h3>
+                    <p>"雪利酒"和"雪莉酒"是同一种酒的不同中文翻译。它们都对应英文的 "Sherry"。不过在中国市场中，不同商家可能使用不同的译名。无论哪个名字，指的都是来自西班牙赫雷斯地区的加强型葡萄酒。建议认准 D.O. Jerez-Xeres-Sherry 原产地保护标识来确保正品。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>雪利酒有哪些类型？</h3>
+                    <p>雪利酒分为两大类：<strong>干型</strong>包括 Fino、Manzanilla、Amontillado、Oloroso 和 Palo Cortado；<strong>甜型</strong>包括 Pedro Ximénez（PX）和 Moscatel。此外还有调配型的 Medium、Pale Cream 和 Cream。每种类型的风格差异很大，从极度干爽清冽到甜蜜浓郁都有。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>雪利酒应该怎么喝？</h3>
+                    <p>干型雪利酒（Fino、Manzanilla）建议冰镇至7-9°C饮用，搭配火腿、海鲜、橄榄等 tapas 小食。Amontillado 和 Oloroso 略微升温至12-14°C，适合搭配炖菜、肉类。甜型 PX 可以作为餐后甜酒，搭配冰淇淋、巧克力，也可以少量加入咖啡中使用。建议开瓶后尽快饮用完。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>雪利酒新手入门推荐哪几款？</h3>
+                    <p>推荐从三种不同风格的酒开始体验：一支 Fino（了解干型雪利酒的清冽优雅），一支 Amontillado（感受氧化带来的坚果复杂度），一支 Pedro Ximénez（体验甜型雪利酒的甜蜜魅力）。这样能完整感受雪利酒世界的多样性。可以在「莫妮的雪利世界」淘宝店找到精选的入门组合。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Schema for GEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是雪利酒？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "雪利酒（Sherry）是一种来自西班牙南部安达卢西亚地区的加强型葡萄酒。只有在赫雷斯、圣玛利亚港和桑卢卡尔生产的加强酒才有资格被命名为雪利酒。采用独特的索莱拉系统陈酿，被誉为装在瓶子里的西班牙阳光。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "雪利酒和雪莉酒有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "雪利酒和雪莉酒是同一种酒的不同中文翻译，都对应英文Sherry。在中国市场中不同商家可能使用不同译名，建议认准D.O. Jerez-Xeres-Sherry原产地保护标识。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "雪利酒有哪些类型？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "雪利酒分为干型（Fino、Manzanilla、Amontillado、Oloroso、Palo Cortado）和甜型（Pedro Ximénez、Moscatel）两大类，还有调配型的Medium、Pale Cream和Cream。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "雪利酒新手入门推荐哪几款？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "推荐从三种不同风格的酒开始：一支Fino了解干型清冽，一支Amontillado感受坚果复杂度，一支Pedro Ximénez体验甜蜜魅力。可以在莫妮的雪利世界淘宝店找到精选入门组合。"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-icon">🍷</span>
+                    <span class="logo-text">莫妮的雪利世界</span>
+                    <p>传播专业的雪利酒知识<br>提供丰富的雪利酒产品<br>分享雪利酒带来的乐趣</p>
+                </div>
+                <div class="footer-links">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="guide.html">雪利酒百科</a></li>
+                        <li><a href="articles.html">文章</a></li>
+                        <li><a href="products.html">推荐酒款</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p>微信客服：jiang-jiang-ge</p>
+                    <p>淘宝店铺：<a href="https://sherryworld.taobao.com" target="_blank" rel="noopener">sherryworld.taobao.com</a></p>
+                    <p>微信公众号：莫妮的雪利世界</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 莫妮的雪利世界. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
