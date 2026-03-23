@@ -32,26 +32,9 @@
             <h1 style="text-align:center; margin-bottom: 1rem;">📝 文章</h1>
             <p style="text-align:center; color: var(--color-text-light); margin-bottom: 3rem;">专业的雪利酒知识、行业动态与品鉴分享</p>
 
-            <div class="articles-grid">
-                <a href="articles/fino-summer-drink-2fcde904.html" class="article-card">
-                    <div class="article-date">2025年</div>
-                    <h3>一年陈的Fino，竟是沁人心脾的解暑神器</h3>
-                    <p>这支令人惊喜的Fino上架才短短几周，已收获一波好评。除了颜值惹人爱不释手，饮家们更为不知不觉喝完一瓶的超快速度和轻松愉悦惊叹不已……</p>
-                    <span class="read-more">阅读全文 →</span>
-                </a>
-                <a href="articles/2025-sherry-sales.html" class="article-card">
-                    <div class="article-date">2026年2月4日</div>
-                    <h3>2025年雪利酒销量概况</h3>
-                    <p>Manzanilla蝉联销量第一达560万升，英国脱欧后逆势增长7.4%，印度市场即将开启新篇章……</p>
-                    <span class="read-more">阅读全文 →</span>
-                </a>
-                <a href="articles/2025-popular-wines.html" class="article-card">
-                    <div class="article-date">2026年</div>
-                    <h3>2025最受欢迎葡萄酒排行</h3>
-                    <p>全球最受欢迎的葡萄酒有哪些？雪利酒在国际舞台上的表现如何？</p>
-                    <span class="read-more">阅读全文 →</span>
-                </a>
-            </div>
+            <div class="articles-grid" id="articles-grid"></div>
+            <p id="articles-load-status" style="text-align:center; color: var(--color-text-light); margin-top: 0.5rem;">加载中…</p>
+            <p id="articles-error" style="display:none; text-align:center; color: #a33; margin-top: 0.5rem;"></p>
         </div>
     </div>
 
@@ -81,11 +64,63 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 莫妮的雪利世界. All rights reserved.</p>
+                <p>&copy; 2026 莫妮的雪利世界. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script>
+    (function () {
+        var grid = document.getElementById('articles-grid');
+        var loading = document.getElementById('articles-load-status');
+        var errEl = document.getElementById('articles-error');
+        if (!grid || !loading) return;
+
+        fetch('articles.json', { cache: 'no-store' })
+            .then(function (r) {
+                if (!r.ok) throw new Error('http ' + r.status);
+                return r.json();
+            })
+            .then(function (items) {
+                loading.style.display = 'none';
+                grid.innerHTML = '';
+                if (!items || !items.length) {
+                    var empty = document.createElement('p');
+                    empty.style.cssText = 'grid-column:1/-1;text-align:center;color:var(--color-text-light)';
+                    empty.textContent = '暂无已发布文章。';
+                    grid.appendChild(empty);
+                    return;
+                }
+                items.forEach(function (it) {
+                    var a = document.createElement('a');
+                    a.href = it.href || '#';
+                    a.className = 'article-card';
+                    var d = document.createElement('div');
+                    d.className = 'article-date';
+                    d.textContent = it.date_label || '';
+                    var h3 = document.createElement('h3');
+                    h3.textContent = it.title || '';
+                    var p = document.createElement('p');
+                    p.textContent = it.excerpt || '';
+                    var span = document.createElement('span');
+                    span.className = 'read-more';
+                    span.textContent = '阅读全文 →';
+                    a.appendChild(d);
+                    a.appendChild(h3);
+                    a.appendChild(p);
+                    a.appendChild(span);
+                    grid.appendChild(a);
+                });
+            })
+            .catch(function () {
+                loading.style.display = 'none';
+                if (errEl) {
+                    errEl.style.display = 'block';
+                    errEl.textContent = '文章列表加载失败（缺少 articles.json 或网络错误），请刷新或联系管理员更新站点。';
+                }
+            });
+    })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
